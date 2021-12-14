@@ -1,0 +1,29 @@
+module Sandpile exposing (..)
+
+import Browser
+import Html
+import Html.Attributes
+import Html.Events
+import Svg exposing (..)
+import Svg.Attributes exposing (..)
+import Svg.Events exposing (..)
+import Array exposing (..)
+
+main = Browser.element {init=init, update=update, subscriptions=subscriptions, view=view}
+
+type Model = Array (Array Int)
+type Msg = RandGen
+       
+init: () -> Model
+init _ = Array.fromList []
+
+update: Msg -> Model -> Model
+update msg model = model
+
+view: Model -> Html Msg
+view model ->
+    Html.text ""
+
+subscriptions: Model -> Sub Msg
+subscriptions model = Sub.none
+                      
